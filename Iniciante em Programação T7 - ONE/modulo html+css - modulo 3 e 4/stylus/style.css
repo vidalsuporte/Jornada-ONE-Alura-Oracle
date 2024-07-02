@@ -11,13 +11,13 @@
 
 
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0%;
+    padding: 0%;
 }
 
 body{
     box-sizing: border-box;
-    height: 50%;
+    height: 100vh;
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
 }
@@ -33,7 +33,7 @@ body{
 .cabecalho__menu__link{
 color: var(--cor-terciaria);
 font-family: var(--font-secundaria);
-font-size: 24px;
+font-size: 1.7rem;
 text-decoration: none;
 
 }
@@ -56,7 +56,7 @@ text-decoration: none;
 
 .apresentacao__conteudo{
 
-width: 50%;
+width: 45%;
 display: flex;
 flex-direction: column;
 gap: 20px;
@@ -64,14 +64,14 @@ gap: 20px;
 
 
 .apresentacao__conteudo__titulo{
-font-size: 30px;
+font-size: 1.7rem;
 font-family: var(--font-principal);
 font-weight: 400;
 
 }
 
 .apresentacao__conteudo__texto{
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: var(--font-secundaria);
 }
 .apresentacao__links{
@@ -85,17 +85,17 @@ font-weight: 400;
 .apresentacao__links_subtitulo{
     font-family: var(--font-principal);
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
 
 }
 .apresentacao__links__link{
    display:  flex;
-    width: 280px;
+    width: 50%;
     font-family: var(--font-secundaria);
     font-weight: 600;
     border: 4px solid var(--cor-terciaria);
     border-radius: 16px;
-    font-size: 24px;
+    font-size: 1.5rem;
     padding: 21.5px 0px;
     text-decoration: none;
     color: var(--cor-secundaria);
@@ -108,6 +108,11 @@ font-weight: 400;
     background-color: var(--cor-hover);
 }
 
+.apresentacao__imagem{
+width: 45%;
+
+}
+
 .rodape{
 background-color: var(--cor-terciaria);
 color: var(--cor-secundaria);
@@ -115,5 +120,30 @@ padding: 15px 0px ;
 text-align: center;
 font-family: var(--font-secundaria);
 font-weight: 400;
-font-size: 24px;
+font-size: 1.5rem;
+}
+
+
+@media(max-width: 1200px){
+
+    .apresentacao{
+        flex-direction: column-reverse;
+        gap: 10px;
+        }
+
+    .cabecalho__menu{
+        justify-content: center;
+    }
+
+    .cabecalho{
+        padding: 3% 0% 0% 0%;
+    }
+
+    .apresentacao__conteudo{
+
+        width:80%;
+      gap: 30px;
+        }
+
+
 }
