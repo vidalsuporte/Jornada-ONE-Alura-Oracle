@@ -40,7 +40,7 @@ function descriptogravarMsg(){
      }else{
         messagemEntrada =   messagemEntrada.replace(/enter/g, 'e');
         messagemEntrada =   messagemEntrada.replace(/imes/g, 'i');
-        messagemEntrada =   messagemEntrada.replace(/ai/, 'a');
+        messagemEntrada =   messagemEntrada.replace(/ai/g, 'a');
         messagemEntrada =   messagemEntrada.replace(/ober/g, 'o');
         messagemEntrada =   messagemEntrada.replace(/ufat/g, 'u');
      console.log(messagemEntrada);
