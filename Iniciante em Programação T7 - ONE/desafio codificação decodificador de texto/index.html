@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Codificador e Decodificador</title>
+    <link rel="stylesheet" href="./stylus/stylus.css">
+    
+</head>
+<body>
+    <header></header>
+    <main class="principal">
+        <img class="principal__imagem" src="./assets/Frame 6.png" alt="logo alura">
+ <section class="apresentacao">
+
+<div  class="apresentacao__formulario">
+<textarea class="apresentacao__formulario__textArea" name="texto-entrada" id="texto-entrada" placeholder="Digite a mesnsagem" ></textarea>
+
+ <H5 class="apresentacao__formulario__aviso"> <img src="./assets/alert.png" alt="icon alert"> Apenas letras minúsculas e sem acento.</H5>
+
+<div class="apresentacao__formulario__botao" >
+<button class="apresentacao__formulario__botao_criptografar" id="criptografar" onclick= "criptogravarMsg()" >Criptografar</button>
+<button class="apresentacao__formulario__botao_descriptografar" id="descriptografar" onclick= "descriptogravarMsg()" >Decriptografar</button>
+</div>
+</div>
+
+<div class="texto__saida">
+    
+<div class="texto__saida__div" id="div_imagem_msg" >
+    <img class="texto__saida__img" id="texto__saida__img" src="./assets/High quality products 1 1.png " alt="imagem da decodificação" >
+    
+    <h4 class="texto__saida__nenhuma_menssagem" id="nenhuma_msg" >Nenhuma menssagem encontrada!
+    </h4>
+
+   
+    <p class="texto__saida__aviso" id="texto__saida__aviso">
+
+Digite um texto que você deseja criptografar ou descriptografar.
+</p>
+
+
+    <button class="texto__saida__btn" id="copiar" hidden= "true" onclick="copiaResultado()">copiar</button>
+    </div>
+</section>
+
+
+
+
+
+
+ 
+
+
+
+
+    </main>
+<footer><p class="rodape">Desafio de codificação desenvolvido por André Vidal</p></footer>
+
+<script src="./javascript/desafioJS.js"></script>
+</body>
+</html>
