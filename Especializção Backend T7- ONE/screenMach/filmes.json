@@ -1,0 +1,42 @@
+[
+  {
+    "Nome": "Sonic",
+    "AnoLancamento": 2013,
+    "Duracao": 18,
+    "InclusoNoPlano": false,
+    "SomaAvaliacao": 0.0,
+    "TotalDeAvaliacoes": 0
+  },
+  {
+    "Nome": "Thor",
+    "AnoLancamento": 2011,
+    "Duracao": 115,
+    "InclusoNoPlano": false,
+    "SomaAvaliacao": 0.0,
+    "TotalDeAvaliacoes": 0
+  },
+  {
+    "Nome": "Top Gun",
+    "AnoLancamento": 1986,
+    "Duracao": 109,
+    "InclusoNoPlano": false,
+    "SomaAvaliacao": 0.0,
+    "TotalDeAvaliacoes": 0
+  },
+  {
+    "Nome": "Bee Movie",
+    "AnoLancamento": 2007,
+    "Duracao": 91,
+    "InclusoNoPlano": false,
+    "SomaAvaliacao": 0.0,
+    "TotalDeAvaliacoes": 0
+  },
+  {
+    "Nome": "Sir",
+    "AnoLancamento": 2018,
+    "Duracao": 99,
+    "InclusoNoPlano": false,
+    "SomaAvaliacao": 0.0,
+    "TotalDeAvaliacoes": 0
+  }
+]
