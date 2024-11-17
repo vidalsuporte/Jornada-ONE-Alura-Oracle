@@ -3,17 +3,15 @@ package br.com.vidaluporte.springSemWeb.principal;
 import br.com.vidaluporte.springSemWeb.model.DadosEpisodio;
 import br.com.vidaluporte.springSemWeb.model.DadosSerie;
 import br.com.vidaluporte.springSemWeb.model.DadosTemporada;
-import br.com.vidaluporte.springSemWeb.model.Episodio;
+import br.com.vidaluporte.springSemWeb.model.entity.Episodio;
 import br.com.vidaluporte.springSemWeb.service.ConsumoApi;
 import br.com.vidaluporte.springSemWeb.service.ConverteDados;
 
 import java.text.DecimalFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Principal {
+public class PrincipalLambdas {
     private Scanner entrada = new Scanner(System.in);
     private final String ENDERECO = "https://www.omdbapi.com/?t=";
     private final String APIKEY = "&apikey=4dfbd808";

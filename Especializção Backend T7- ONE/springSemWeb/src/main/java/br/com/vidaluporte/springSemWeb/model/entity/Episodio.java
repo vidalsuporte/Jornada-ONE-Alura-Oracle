@@ -1,4 +1,6 @@
-package br.com.vidaluporte.springSemWeb.model;
+package br.com.vidaluporte.springSemWeb.model.entity;
+
+import br.com.vidaluporte.springSemWeb.model.DadosEpisodio;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;

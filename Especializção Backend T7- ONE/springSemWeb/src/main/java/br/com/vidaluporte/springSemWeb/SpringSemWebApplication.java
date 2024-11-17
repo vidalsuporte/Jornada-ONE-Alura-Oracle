@@ -1,17 +1,10 @@
 package br.com.vidaluporte.springSemWeb;
 
-import br.com.vidaluporte.springSemWeb.model.DadosEpisodio;
-import br.com.vidaluporte.springSemWeb.model.DadosSerie;
-import br.com.vidaluporte.springSemWeb.model.DadosTemporada;
-import br.com.vidaluporte.springSemWeb.principal.Principal;
-import br.com.vidaluporte.springSemWeb.service.ConsumoApi;
-import br.com.vidaluporte.springSemWeb.service.ConverteDados;
+import br.com.vidaluporte.springSemWeb.principal.PrincipalJPA;
+import br.com.vidaluporte.springSemWeb.principal.PrincipalLambdas;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @SpringBootApplication
 public class SpringSemWebApplication implements CommandLineRunner {
@@ -22,10 +15,11 @@ public class SpringSemWebApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Principal principal = new Principal();
-		principal.exibeMenu();
+//		PrincipalLambdas principal = new PrincipalLambdas();
+//		principal.exibeMenu();
 
-
+		PrincipalJPA principalJPA = new PrincipalJPA();
+		principalJPA.exibeMenu();
 
 
 
