@@ -1,5 +1,6 @@
 package br.com.vidaluporte.springSemWeb.repository;
 
+import br.com.vidaluporte.springSemWeb.model.entity.Episodio;
 import br.com.vidaluporte.springSemWeb.model.entity.Serie;
 import br.com.vidaluporte.springSemWeb.model.enums.Categoria;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -24,5 +25,12 @@ Optional<Serie> findByTituloContainingIgnoreCase(String nomeSerie);
 @Query("SELECT s FROM Serie s where s.totalTemporada <= :temporadas and s.avaliacao >= :avaliacao")
     List<Serie> seriesPorTemporadaEAvaliacao(int temporadas, double avaliacao);
 
+@Query("SELECT e FROM Serie s JOIN s.episodios e WHERE e.titulo ILIKE %:trechoEpsodio%")
+    List<Episodio> episodiosPorTrecho(String trechoEpsodio);
 
+@Query("SELECT e FROM Serie s JOIN s.episodios e WHERE s =:serie ORDER BY e.avaliacao DESC LIMIT 5 ")
+    List<Episodio> topEpsodiosPorSerie(Serie serie);
+
+    @Query("SELECT e FROM Serie s JOIN s.episodios e WHERE s =:serie AND YEAR(e.dataLancamento) >= :anoLimite")
+    List<Episodio> episodiosPorAno(Serie serie, int anoLimite);
 }

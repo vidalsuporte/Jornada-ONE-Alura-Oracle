@@ -3,7 +3,7 @@ package br.com.vidaluporte.springSemWeb.model.enums;
 public enum Categoria {
     ACAO("Action", "Ação"),
     ROMACE("Romance", "Romance"),
-    COMEDIA("Comendy", "Comédia"),
+    COMEDIA("Comedy", "Comédia"),
     DRAMA("Drama", "Drama"),
     CRIME("Crime", "Crime");
 
