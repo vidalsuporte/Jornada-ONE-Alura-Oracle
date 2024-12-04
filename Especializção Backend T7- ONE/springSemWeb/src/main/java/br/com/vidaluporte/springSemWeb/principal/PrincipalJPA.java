@@ -18,8 +18,7 @@ public class PrincipalJPA {
     private final String APIKEY = "&apikey=4dfbd808";
     private ConsumoApi consumoApi = new ConsumoApi();
     private ConverteDados conversor = new ConverteDados();
-    private List<DadosSerie> dadosSeries = new ArrayList<>();
-    private SerieRepository repositorio;
+     private SerieRepository repositorio;
     private  List<Serie> series = new ArrayList<>();
     private   Optional<Serie> serieBuscada;
     public PrincipalJPA(SerieRepository repositorio) {
@@ -192,7 +191,7 @@ private void buscarEpisodioPorSerie(){
 
         List<Serie> seriesEncontradas = repositorio.findByAtoresContainingIgnoreCaseAndAvaliacaoGreaterThanEqual(nomeAtor,avaliacao);
         if(!seriesEncontradas.isEmpty()) {
-           seriesEncontradas.stream()
+           seriesEncontradas
                    .forEach(System.out::println);
         }else {
             System.out.println("Ator " + nomeAtor + " não possui filme cadastrado no banco de dado.");
