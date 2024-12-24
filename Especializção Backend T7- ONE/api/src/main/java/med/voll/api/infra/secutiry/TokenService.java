@@ -1,8 +1,11 @@
 package med.voll.api.infra.secutiry;
 
 import com.auth0.jwt.JWT;
+import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
+import com.auth0.jwt.exceptions.JWTVerificationException;
+import com.auth0.jwt.interfaces.DecodedJWT;
 import med.voll.api.domain.usuario.Usuario;
 import org.springframework.stereotype.Service;
 
@@ -36,4 +39,18 @@ public class TokenService {
     }
 
 
+    public String getSubject(String tokenJWT) {
+        DecodedJWT decodedJWT;
+        try {
+            var algoritmo = Algorithm.HMAC256("12345678");
+            return JWT.require(algoritmo)
+                    .withIssuer("API Voll.med")
+                     .build()
+                    .verify(tokenJWT)
+                    .getSubject();
+        } catch (JWTVerificationException exception){
+            throw new RuntimeException("Token JWT Inválido ou Expirado!");
+        }
+
+    }
 }
