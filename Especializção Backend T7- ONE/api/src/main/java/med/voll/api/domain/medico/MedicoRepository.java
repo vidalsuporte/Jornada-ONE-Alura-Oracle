@@ -9,18 +9,18 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.time.LocalDateTime;
 
-public interface PacinteRepository extends JpaRepository<Medico,Long> {
+public interface MedicoRepository extends JpaRepository<Medico,Long> {
     Page<Medico> findAllByAtivoTrue(Pageable pageable);
 
 
-   @Query("""
+   /*@Query("""
            SELECT m  FROM Medico m
            WHERE
            m.ativo = true
-           and
-           m.especialidade = : especialidade
-           and
-           m.id not in(SELECT c.medico.id from Consulta c
+           AND
+           m.especialidade = :especialidade
+           AND
+           m.id NOT IN(SELECT c.medico.id from Consulta c
                    WHERE
                     c.data = : data
                    )
@@ -29,7 +29,18 @@ public interface PacinteRepository extends JpaRepository<Medico,Long> {
            
            
            
-           """)
+           """)*/
+    @Query("""
+            SELECT m  FROM Medico as m 
+            WHERE m.ativo = true 
+            AND 
+            m.especialidade = :especialidade
+            AND 
+            m.id NOT IN
+            (SELECT c.medico.id from Consulta as c 
+            WHERE c.data = :data ) 
+            order by rand() limit 1
+            """)
     public Medico escolherMedicoAleatorioLivreNaData(Especialidade especialidade, @NotNull @Future LocalDateTime data);
 
 

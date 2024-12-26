@@ -20,11 +20,12 @@ public class Medico {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private  String email;
+    private String email;
     private String crm;
     private String telefone;
     private Boolean ativo;
 
+    @Column(name = "especialidade")
     @Enumerated(EnumType.STRING)
     private Especialidade especialidade;
 
