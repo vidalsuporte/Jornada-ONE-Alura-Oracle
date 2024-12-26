@@ -13,23 +13,6 @@ public interface MedicoRepository extends JpaRepository<Medico,Long> {
     Page<Medico> findAllByAtivoTrue(Pageable pageable);
 
 
-   /*@Query("""
-           SELECT m  FROM Medico m
-           WHERE
-           m.ativo = true
-           AND
-           m.especialidade = :especialidade
-           AND
-           m.id NOT IN(SELECT c.medico.id from Consulta c
-                   WHERE
-                    c.data = : data
-                   )
-           order by rand()
-           limit 1
-           
-           
-           
-           """)*/
     @Query("""
             SELECT m  FROM Medico as m 
             WHERE m.ativo = true 
